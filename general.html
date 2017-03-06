@@ -25,6 +25,11 @@
         responsiveVoice.speak(texttospeech);
         window.open("https://www.youtube.com/feed/trending");
       }
+      if(st.match("YouTube") != null & st.match('feed') != null || st.match("YouTube") != null & st.match('subscriptions')) {
+        texttospeech="showing your feed on youtube";
+        responsiveVoice.speak(texttospeech);
+        window.open("https://www.youtube.com/feed/subscriptions");
+      }
     };
     </script>
 <script>
