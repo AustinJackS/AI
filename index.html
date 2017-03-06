@@ -2,15 +2,18 @@
 <body>
   <h1>An AI type thing!</h1>
   <h3>Say 'show me images of...' or 'search google for...'</h3>
+  <h3 id="speechtext"></h3>
 <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 <script>
 if (annyang) {
   // Let's define our first command. First the text we expect, and then the function it should call
   var commands = {
     'show me images of *imgs': function(imgs) {
+      document.getElementById("speechtext").innerHTML='searching for images of '+imgs;
     	window.open('https://www.google.com/search?q='+imgs+'&rlz=1CAACAV_enUS733US733&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiY7P_UtcDSAhUH7oMKHeEpDj8Q_AUICCgB&biw=1536&bih=726');
     },
     'search google for *query': function(query) {
+      document.getElementById("speechtext").innerHTML='searching google for '+query;
       window.open('https://www.google.com/search?q='+query+'+&oq=query&aqs=chrome..69i57j0l5.2585j0j7&sourceid=chrome&ie=UTF-8');
     }
   };
