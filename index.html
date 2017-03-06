@@ -27,6 +27,12 @@ if (annyang) {
       responsiveVoice.speak(texttospeech);
       document.getElementById("speechtext").innerHTML='searching youtube for '+query2;
       window.open('https://www.youtube.com/results?search_query='+query2);
+    },
+    'whats trending on youtube':function() {
+      texttospeech='searching for whats trending on youtube';
+      responsiveVoice.speak(texttospeech);
+      document.getElementById("speechtext").innerHTML="searching for what's trending on youtube";
+      window.open('https://www.youtube.com/feed/trending');
     }
   };
 
