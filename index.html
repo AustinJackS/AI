@@ -17,6 +17,7 @@ if (annyang) {
     },
     'search (google) for *query': function(query) {
       texttospeech='searching google for '+query;
+      responsiveVoice.speak(texttospeech);
       document.getElementById("speechtext").innerHTML='searching google for '+query;
       window.open('https://www.google.com/search?q='+query+'+&oq=query&aqs=chrome..69i57j0l5.2585j0j7&sourceid=chrome&ie=UTF-8');
     }
