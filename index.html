@@ -33,12 +33,7 @@ if (annyang) {
       responsiveVoice.speak(texttospeech);
       document.getElementById("speechtext").innerHTML="searching for what's trending on youtube";
       window.open('https://www.youtube.com/feed/trending');
-    },
-    'check my feed on youtube':function() {
-      texttospeech='checking your youtube feed';
-      responsiveVoice.speak(texttospeech);
-      document.getElementById("speechtext").innerHTML="checking youtube feed";
-      window.open('https://www.youtube.com/feed/subscriptions');
+    }
   };
 
   // Add our commands to annyang
