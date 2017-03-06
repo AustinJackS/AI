@@ -14,7 +14,7 @@
         responsiveVoice.speak(texttospeech);
         window.open('https://www.google.com/#q='+st+'&*');
       }
-      if(st.match("YouTube") != null & st.match('feed') == null & st.match('trending') == null ) {
+      if(st.match("YouTube") != null & st.match('feed') == null & st.match('trending') == null & st.match('subscriptions') ) {
         st=repl(st);
         texttospeech='searching youtube for '+st;
         responsiveVoice.speak(texttospeech);
