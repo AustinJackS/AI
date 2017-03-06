@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<h1>Currently only repeats whatever is said.</h1>
+<script>
+var recognition = new webkitSpeechRecognition();
+recognition.onresult = function(event) { 
+  console.log(event);
+  alert(event['results'][0][0]['transcript']);
+}
+recognition.start();
+</script>
+</body>
+
+</html>
