@@ -20,6 +20,11 @@
         responsiveVoice.speak(texttospeech);
         window.open('https://www.youtube.com/results?search_query='+st);
       }
+      if(st.match("YouTube") != null & st.match('trending') != null) {
+        texttospeech="showing what's trending on youtube";
+        responsiveVoice.speak(texttospeech);
+        window.open("https://www.youtube.com/feed/trending");
+      }
     };
     </script>
 <script>
