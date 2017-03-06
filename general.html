@@ -19,6 +19,7 @@ var recognition = new webkitSpeechRecognition();
 recognition.onresult = function(event) { 
   console.log(event);
   document.getElementById('sbtn').innerHTML='Start listening';
+  alert(event['results'][0][0]['transcript']);
   intr(event['results'][0][0]['transcript']);
 }
 </script>
