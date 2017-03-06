@@ -14,7 +14,7 @@
         responsiveVoice.speak(texttospeech);
         window.open('https://www.google.com/#q='+st+'&*');
       }
-      if(st.match("YouTube") != null & st.match('feed') == null & st.match('trending') == null & st.match('subscriptions') == null ) {
+      if(st.match("YouTube") != null & st.match('feed') == null & st.match('trending') == null & st.match('subscription') == null ) {
         st=repl(st);
         texttospeech='searching youtube for '+st;
         responsiveVoice.speak(texttospeech);
@@ -25,7 +25,7 @@
         responsiveVoice.speak(texttospeech);
         window.open("https://www.youtube.com/feed/trending");
       }
-      if(st.match("YouTube") != null & st.match('feed') != null || st.match("YouTube") != null & st.match('subscriptions')) {
+      if(st.match("YouTube") != null & st.match('feed') != null || st.match("YouTube") != null & st.match('subscription')) {
         texttospeech="showing your feed on youtube";
         responsiveVoice.speak(texttospeech);
         window.open("https://www.youtube.com/feed/subscriptions");
