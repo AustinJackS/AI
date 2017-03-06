@@ -2,14 +2,16 @@
 <html>
 
 <body>
-<h1>Currently only repeats whatever is said.</h1>
+  <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
   <script>
     srch=['google ','Google ','search ','for '];
     var i;
     function repl(s) {for (i=0;i<srch.length;i++) {s=s.replace(srch[i],'');};return s};
     function intr(st) {
-      if(st.match('Google') != null || st.match('search') != null) {
+      if(st.match('Google') != null || st.match('search') != null & st.match('youtube') == null) {
         st=repl(st);
+        texttospeech='searching google for '+st;
+        responsiveVoice.speak(texttospeech);
         window.open('https://www.google.com/#q='+st+'&*');
       }
     };
@@ -19,7 +21,6 @@ var recognition = new webkitSpeechRecognition();
 recognition.onresult = function(event) { 
   console.log(event);
   document.getElementById('sbtn').innerHTML='Start listening';
-  alert(event['results'][0][0]['transcript']);
   intr(event['results'][0][0]['transcript']);
 }
 </script>
