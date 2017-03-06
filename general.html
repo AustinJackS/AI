@@ -8,7 +8,7 @@
     var i;
     function repl(s) {for (i=0;i<srch.length;i++) {s=s.replace(srch[i],'');};return s};
     function intr(st) {
-      if(st.match('google') != null || st.match('search') != null) {
+      if(st.match('Google') != null || st.match('search') != null) {
         st=repl(st);
         window.open('https://www.google.com/?q='+st);
       }
