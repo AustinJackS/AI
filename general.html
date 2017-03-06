@@ -4,7 +4,7 @@
 <body>
   <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
   <script>
-    srch=['google ','Google ','search ','for '];
+    srch=['google ','Google ','search ','for ','YouTube '];
     var i;
     function repl(s) {for (i=0;i<srch.length;i++) {s=s.replace(srch[i],'');};return s};
     function intr(st) {
@@ -13,6 +13,12 @@
         texttospeech='searching google for '+st;
         responsiveVoice.speak(texttospeech);
         window.open('https://www.google.com/#q='+st+'&*');
+      }
+      if(st.match("YouTube") != null) {
+        st=repl(st);
+        texttospeech='searching youtube for '+st;
+        responsiveVoice.speak(texttospeech);
+        window.open('https://www.youtube.com/results?search_query='+st);
       }
     };
     </script>
