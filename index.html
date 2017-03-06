@@ -22,10 +22,10 @@ if (annyang) {
       window.open('https://www.google.com/search?q='+query+'+&oq=query&aqs=chrome..69i57j0l5.2585j0j7&sourceid=chrome&ie=UTF-8');
     },
     'search youtube for *query2':function(query2) {
-      texttospeech='searching youtube for '+query;
+      texttospeech='searching youtube for '+query2;
       responsiveVoice.speak(texttospeech);
-      document.getElementById("speechtext").innerHTML='searching youtube for '+query;
-      window.open('https://www.youtube.com/results?search_query='+query);
+      document.getElementById("speechtext").innerHTML='searching youtube for '+query2;
+      window.open('https://www.youtube.com/results?search_query='+query2);
     }
   };
 
