@@ -8,7 +8,7 @@
     var i;
     function repl(s) {for (i=0;i<srch.length;i++) {s=s.replace(srch[i],'');};return s};
     function intr(st) {
-      if(st.match('Google') != null || st.match('search') != null & st.match('youtube') == null) {
+      if(st.match('Google') != null || st.match('search') != null & st.match('YouTube') == null) {
         st=repl(st);
         texttospeech='searching google for '+st;
         responsiveVoice.speak(texttospeech);
