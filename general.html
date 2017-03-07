@@ -4,7 +4,7 @@
 <body onkeyup="recognition.start();document.getElementById('sbtn').innerHTML='Listening...';">
   <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
   <script>
-    srch=['google ','Google ','search ','for ','YouTube ','Go to '];
+    srch=['google ','Google ','search ','for ','YouTube ','go to '];
     var i;
     function repl(s) {for (i=0;i<srch.length;i++) {s=s.replace(srch[i],'');};return s};
     function intr(st) {
@@ -30,7 +30,7 @@
         responsiveVoice.speak(texttospeech);
         window.open("https://www.youtube.com/feed/subscriptions");
       }
-      if(st.match('Go to') != null) {
+      if(st.match('go to') != null) {
         st=repl(st);
         texttospeech="Going to "+st;
         responsiveVoice.speak(texttospeech);
