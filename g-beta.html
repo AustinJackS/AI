@@ -3,7 +3,7 @@
 <p id="speech"></p>
 <script>
 var recognition = new webkitSpeechRecognition();
-recognition.continous = true;
+recognition.continuous=true;
 recognition.onresult = function(event) { 
    document.getElementById("speech").innerHTML+=event['results'][0][0]['transcript'];
 }
