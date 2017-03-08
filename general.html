@@ -36,6 +36,12 @@
         responsiveVoice.speak(texttospeech);
         window.open("http://"+st);
       }
+      if(st.match('search') != null & st.match("soundcloud") != null) {
+        st=repl(st);
+        texttospeech="Searching soundcloud for "+st;
+        responsiveVoice.speak(texttospeech);
+        window.open("https://soundcloud.com/search?q="+st);
+      }
     };
     </script>
 <script>
