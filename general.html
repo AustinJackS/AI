@@ -4,11 +4,11 @@
 <body onkeyup="recognition.start();document.getElementById('sbtn').innerHTML='Listening...';">
   <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
   <script>
-    srch=['google ','Google ','search ','for ','YouTube ','go to '];
+    srch=['google ','Google ','search ','for ','YouTube ','go to ','soundcloud '];
     var i;
     function repl(s) {for (i=0;i<srch.length;i++) {s=s.replace(srch[i],'');};return s};
     function intr(st) {
-      if(st.match('Google') != null || st.match('search') != null & st.match('YouTube') == null) {
+      if(st.match('Google') != null || st.match('search') != null & st.match('YouTube') == null & st.match('soundcloud') == null) {
         st=repl(st);
         texttospeech='searching google for '+st;
         responsiveVoice.speak(texttospeech);
